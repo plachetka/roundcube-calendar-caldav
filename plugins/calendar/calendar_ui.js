@@ -763,7 +763,9 @@ function rcube_calendar_ui(settings)
       $('#edit-tab-attachments')[(calendar.attachments?'show':'hide')]();
 
       // activate the first tab
-      $('#eventtabs').tabs('select', 0);
+      //$('#eventtabs').tabs('select', 0);
+      $('#eventtabs').tabs('option', 'active', 0);
+
       
       // hack: set task to 'calendar' to make all dialog actions work correctly
       var comm_path_before = rcmail.env.comm_path;
